@@ -81,6 +81,29 @@ class secondRoute extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Segunda pantalla'),
       ),
+      body: Center(
+        child: SizedBox(
+          height: 100,
+          child: 
+          Column(children: [
+            Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Column(            
+              children: const<Widget>[
+                Text('Old Boy'),
+                Text("Park Chan-Wook", style: TextStyle(color: Colors.grey),),
+              ],
+            )
+            ,
+            const Icon(Icons.star),
+            const Text('4.5'),
+          ],
+          ),
+          ],)
+          
+        )
+      ),
     );
   }
 
