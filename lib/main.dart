@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
@@ -31,8 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,36 +36,36 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: SizedBox(
-          height: 100,
-          child: 
-          Column(children: [
-            Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(            
-              children: const<Widget>[
-                Text('Old Boy'),
-                Text("Park Chan-Wook", style: TextStyle(color: Colors.grey),),
-              ],
-            )
-            ,
-            const Icon(Icons.star),
-            const Text('4.5'),
-          ],
-          ),
-          ElevatedButton(child: const Text('Pelicula'), onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => secondRoute()));
-          }),
-          ],)
-          
-        )
-        
-        
-        
-        
-      ),
-      
+          child: SizedBox(
+              height: 100,
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Column(
+                        children: const <Widget>[
+                          Text('Old Boy'),
+                          Text(
+                            "Park Chan-Wook",
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                        ],
+                      ),
+                      const Icon(Icons.star),
+                      const Text('4.5'),
+                    ],
+                  ),
+                  ElevatedButton(
+                      child: const Text('Pelicula'),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => secondRoute()));
+                      }),
+                ],
+              ))),
     );
   }
 }
@@ -82,29 +78,36 @@ class secondRoute extends StatelessWidget {
         title: const Text('Segunda pantalla'),
       ),
       body: Center(
-        child: SizedBox(
-          height: 100,
-          child: 
-          Column(children: [
-            Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Column(            
-              children: const<Widget>[
-                Text('Old Boy'),
-                Text("Park Chan-Wook", style: TextStyle(color: Colors.grey),),
-              ],
-            )
-            ,
-            const Icon(Icons.star),
-            const Text('4.5'),
-          ],
+          child: SizedBox(
+              child: Column(
+                
+        children: [
+          Container(
+            margin: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+            child: Image.network(
+              'https://miro.medium.com/max/640/1*RbmhRUicKhfne7t_7Dqb5w.webp',
+              
+              fit: BoxFit.contain,
+            ),
           ),
-          ],)
-          
-        )
-      ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: const <Widget>[
+                  Text('Old Boy'),
+                  Text(
+                    "Park Chan-Wook",
+                    style: TextStyle(color: Colors.grey),
+                  ),
+                ],
+              ),
+              const Icon(Icons.star),
+              const Text('4.5'),
+            ],
+          ),
+        ],
+      ))),
     );
   }
-
 }
